@@ -22,7 +22,7 @@ export class LeadController {
     type: LeadModel,
   })
   @HttpCode(200)
-  @Post("lead")
+  @Post("create")
   async lead(@Body() lead: LeadModel) {
     return await this.leadService.lead(lead);
   }
