@@ -9,7 +9,7 @@ import {
 } from "@nestjs/common";
 import { ApiBearerAuth, ApiBody, ApiTags } from "@nestjs/swagger";
 import { LeadModel } from "../models";
-import { LeadService } from "../business/";
+import { LeadService } from "../logics";
 
 @ApiBearerAuth()
 @ApiTags("Lead")

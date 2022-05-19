@@ -5,7 +5,7 @@ import { APP_FILTER } from "@nestjs/core";
 
 import { LeadController } from "./controllers";
 
-import { LeadService } from "./business";
+import { LeadService } from "./logics";
 import { HttpExceptionFilter } from "./utils/exceptions.filter";
 
 @Module({
