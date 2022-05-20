@@ -31,15 +31,12 @@ export class LeadService {
           source: lead.source,
           industry: lead.industry,
         },
-      };
+        };
       const createContactResponse =
         await hubspotClient.crm.contacts.basicApi.create(contactObj);
-      return ResponseHelper.SucessResponse(
-        createContactResponse,
-        ResponseMessage.AccountCreated,
-      );
+      return ResponseHelper.SucessResponse({}, ResponseMessage.SuccessMesssage);
     } catch (error) {
-      return ResponseHelper.InvalidResponse(error?.message);
+      return ResponseHelper.InvalidResponse(error?.body?.message);
     }
   }
 }
